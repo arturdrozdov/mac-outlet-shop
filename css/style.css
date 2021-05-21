@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.slider__inner {
+    position: relative;
+    max-width: 100%;
+    background-image: url(../img/banners/ipad_air_banner.jpg);
+    background-position: top;
+    /* background-repeat: no-repeat; */
+    min-height: 350px;
+    background-color: rgb(184, 183, 183);
+    background-size: cover;
+}
+
+
+
+.addButton-slider {
+    position: absolute;
+    top: calc(50% - 50px);
+    left: calc(50% - 70px);
+}
+
+.search {
+    margin: 20px 0;
+}
+
+.search input {
+    min-width: 100%;
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(163, 163, 163, 0.5);
+    padding: 20px 55px;
+
+
+}
+
+.search__inner {
+    position: relative;
+}
+
+.search-button {
+    position: absolute;
+    top: 18px;
+    left: 8px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.icon-search {
+    width: 22px;
+}
+
+.icon-filter {
+    width: 25px;
+    padding: 8px 0;
+
+}
+
+.icon-settings {
+    width: 22px;
+    padding-top: 3px;
+}
+
+.filter-button {
+    position: absolute;
+    right: 50px;
+    top: 10px;
+}
+
+.settings-button {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+}
+
+.filter-button,
+.settings-button {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    background-color: blue;
+    cursor: pointer;
+
+}
+
+.prod__cards-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: calc((100% / 3) - 30px);
+    border: 1px solid rgb(223, 223, 223);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(163, 163, 163, 0.5);
+    margin-bottom: 15px;
+}
+
+.topCard__inner {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 14px 30px;
+    text-align: center;
+}
+
+.item-image {
+    padding: 15px;
+    width: 100%;
+}
+
+.product-name {
+    font-size: 20px;
+    margin: 0 0 8px;
+}
+
+.quantity,
+.price {
+    margin: 5px;
+    color: rgb(117, 117, 117);
+    font-size: 16px;
+
+}
+
+.addButton {
+    padding: 14px 25px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(67, 67, 255);
+    margin: 10px 0;
+    border: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.botCard__inner {
+    line-height: 25px;
+    font-size: 14px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(223, 223, 223);
+}
+
+.botCard__inner-left {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.botCard__inner-right {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.heard-button {
+    position: absolute;
+    border: none;
+    right: 15px;
+    top: 15px;
+    background-color: #fff;
+    padding: 0;
+    cursor: pointer;
+}
+
+.icon-heart {
+    width: 22px;
+}
+
+.topCard-image {
+    overflow: hidden;
+    /* padding: 15px; */
+    max-width: 250px;
+    height: 250px;
+}
+
+.topCard__inner{
+    max-width: 100%;
+}
+
+@media (max-width: 850px) {
+    .card{
+        width: calc((100% / 2) - 30px);
+    }
+
+    .prod__cards-inner {
+        justify-content: space-around;
+    }
+}
