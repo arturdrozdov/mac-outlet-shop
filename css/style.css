@@ -2,6 +2,16 @@
     box-sizing: border-box;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input{
+    outline: none;
+}
+
 .container {
     max-width: 1050px;
     margin: 0 auto;
@@ -96,16 +106,76 @@ body {
 
 }
 
-.prod__cards-inner {
+.main__section-inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main__section-filter{
+    width: calc(30% - 15px);
+}
+.accordionMenu {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    /* max-width: 320px; */
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(163 163 163 / 50%);
+    border: 1px solid rgb(223, 223, 223);
+  }
+  
+  
+  .accordion {
+      position: sticky;
+    width: 100%;
+    background-color: #EDF3FF;
+    color: rgb(100, 100, 100);
+    cursor: pointer;
+    padding: 18px;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .active,
+  .accordion:hover {
+    background-color: rgb(247, 247, 247);
+  }
+  
+  .panel {
+    color: rgb(100, 100, 100);
+    padding: 18px;
+    display: none;
+    overflow: hidden;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(212, 212, 212);
+  }
+  
+  .panel-acc1 div+div {
+    margin-top: 10px;
+  }
+  
+  .lineFromText {
+    margin-right: 25px;
+  }
+  
+  .lineToText {
+    margin-right: 43px;
+  }
+
+.prod__cards {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: calc(70% - 15px);
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    width: calc((100% / 3) - 30px);
+    max-width: calc((100% / 2) - 30px);
     border: 1px solid rgb(223, 223, 223);
     border-radius: 10px;
     overflow: hidden;
@@ -125,6 +195,7 @@ body {
 .item-image {
     padding: 15px;
     width: 100%;
+    object-fit: scale-down;
 }
 
 .product-name {
@@ -189,9 +260,10 @@ body {
 .topCard-image {
     overflow: hidden;
     /* padding: 15px; */
-    max-width: 250px;
-    height: 250px;
+    width: 250px;
+    height: 25add0px;
 }
+
 
 .topCard__inner{
     max-width: 100%;
@@ -202,7 +274,7 @@ body {
         width: calc((100% / 2) - 30px);
     }
 
-    .prod__cards-inner {
+    .prod__cards {
         justify-content: space-around;
     }
 }
