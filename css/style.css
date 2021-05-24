@@ -113,8 +113,11 @@ body {
 
 .main__section-filter{
     width: calc(30% - 15px);
+    display: block;
 }
 .accordionMenu {
+    position: sticky;
+    top: 10px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -126,7 +129,6 @@ body {
   
   
   .accordion {
-      position: sticky;
     width: 100%;
     background-color: #EDF3FF;
     color: rgb(100, 100, 100);
@@ -166,10 +168,15 @@ body {
   }
 
 .prod__cards {
+
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     width: calc(70% - 15px);
+}
+
+.prod__cards-toogle{
+    width: auto;
 }
 
 .card {
