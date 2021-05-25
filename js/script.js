@@ -28,7 +28,34 @@ items.forEach(element => {
 
     document.querySelector('.prod__cards').appendChild(itemCard);
 
+    itemCard.onclick=function(){
+      showModal(element);
+    }
+
 });
+//=================================================================modal=======================
+const modal=document.createElement('div');
+modal.className='modal';
+document.querySelector('body').appendChild(modal);
+const modalInner=document.createElement('div');
+modalInner.className='modal__inner';
+modal.appendChild(modalInner);
+
+const showModal=(elemData)=>{
+  modal.classList.add('modal__active');
+  modal.onclick=e=>{
+    if(modal===e.target){
+      modal.classList.remove("modal__active");
+      return;
+    }
+  }
+  
+  modalInner.innerHTML=`<h6>${elemData.name}</h6>`
+
+
+}
+
+//=================================================================accordion=======================
 
 let accordion = document.getElementsByClassName('accordion');
 
@@ -42,7 +69,7 @@ for (let i = 0; i < accordion.length; i++) {
    
   });
 }
-
+//-------------------------------------------------------------------------------------------------------
 let filterButton=document.querySelector('.filter-button');
 
 filterButton.onclick=function(){
@@ -54,4 +81,3 @@ filterButton.onclick=function(){
 
 }
 
-// console.dir(accordion);
