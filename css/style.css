@@ -140,6 +140,21 @@ body {
     outline: none;
     transition: 0.3s;
   }
+
+  .panel-color__inner{
+      line-height: 25px;
+
+  }
+  .panel-color__inner label{
+      margin: 0 5px 5px;
+      display: inline-block;
+      text-align: center;
+  }
+  .panel-color__inner label input{
+
+    margin-left: 2px;
+
+  }
   
   .active,
   .accordion:hover {
@@ -155,7 +170,7 @@ body {
     border-bottom: 1px solid rgb(212, 212, 212);
   }
   
-  .panel-acc1 div+div {
+  .panel div+div {
     margin-top: 10px;
   }
   
@@ -205,7 +220,7 @@ body {
 .topCard-image {
     overflow: hidden;
     /* padding: 15px; */
-    max-width: 250px;
+    width: 250px;
     height: 250px;
 }
 
@@ -295,23 +310,24 @@ body {
 }
 
 .modal__inner{
-    border:1px solid black;
+    
+    border:1px solid rgb(179, 179, 179);
     border-radius: 10px;
     display: flex;
     align-items: center;
     background-color: #fff;
-    max-width: 70%;
+    max-width: 60%;
     justify-content: space-evenly;
 }
 
 
 .item__info{
-    padding: 10px;
+    padding: 15px;
     display: flex;
     
     flex-direction: column;
-    border-left: 1px solid red;
-    border-right: 1px solid red;
+    border-left: 1px solid rgb(179, 179, 179);
+    border-right: 1px solid rgb(179, 179, 179);
 }
 
 .item__info-mainInfo{
@@ -326,6 +342,7 @@ body {
 
 .item__price{
     text-align: center;
+    padding: 15px;
 }
 
 .item__price-price{
