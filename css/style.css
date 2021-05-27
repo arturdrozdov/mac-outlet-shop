@@ -141,16 +141,16 @@ body {
     transition: 0.3s;
   }
 
-  .panel-color__inner{
+  .panel__inner{
       line-height: 25px;
 
   }
-  .panel-color__inner label{
+  .panel__inner label{
       margin: 0 5px 5px;
       display: inline-block;
       text-align: center;
   }
-  .panel-color__inner label input{
+  .panel__inner label input{
 
     margin-left: 2px;
 
@@ -363,4 +363,11 @@ body {
     .prod__cards {
         justify-content: space-around;
     }
+}
+
+
+input{
+    border:0;
+    color:rgb(67, 67, 255);
+    font-weight:bold;
 }

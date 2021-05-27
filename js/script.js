@@ -1,4 +1,8 @@
+
+
 items.forEach(element => {
+
+  
 
   const itemCard = document.createElement('div');
 
@@ -41,23 +45,51 @@ const arrOfAllColors = [];
 items.map(element => element.color).forEach(item => arrOfAllColors.push(...item));
 const arrOfColors = arrOfAllColors.filter((item, pos, arr) => arr.indexOf(item) == pos);
 
-console.log(arrOfColors)
+const arrOfOS=items.map(element=>element.os).filter((item, pos, arr) => arr.indexOf(item) == pos);
+
+const arrOfDisplays=items.map(element=>element.display).filter((item, pos, arr) => arr.indexOf(item) == pos).sort((a,b)=>a-b);
+console.log(arrOfDisplays);
+
+const arrOfMemory=items.map(element=>element.storage).filter((item, pos, arr) => arr.indexOf(item) == pos).sort((a,b)=>a-b);
+
+console.log(arrOfMemory);
+
+// const accordionColors = document.querySelector('.panel-color__inner');
 
 
-const accordionColors = document.querySelector('.panel-color__inner');
+function renderFilter(divClass, arrData){
+  let accordionClass = document.querySelector(divClass);
 
-arrOfColors.forEach(item => {
+  arrData.forEach(item =>{
 
-  const labelColor = document.createElement('label');
-  labelColor.innerText= item;
+    const label = document.createElement('label');
+    label.innerText= item;
 
-  const checkboxColor = document.createElement('input');
-  checkboxColor.type = 'checkbox';
-  labelColor.appendChild(checkboxColor);
-  accordionColors.appendChild(labelColor);
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    label.appendChild(checkbox);
+    accordionClass.appendChild(label);
+  })
+
+}
+
+renderFilter('.panel-color__inner', arrOfColors);
+renderFilter('.panel-memory__inner', arrOfMemory);
+renderFilter('.panel-os__inner', arrOfOS);
+renderFilter('.panel-display__inner', arrOfDisplays);
+
+// arrOfColors.forEach(item => {
+
+//   const labelColor = document.createElement('label');
+//   labelColor.innerText= item;
+
+//   const checkboxColor = document.createElement('input');
+//   checkboxColor.type = 'checkbox';
+//   labelColor.appendChild(checkboxColor);
+//   accordionColors.appendChild(labelColor);
 
 
-})
+// })
 
 
 //=================================================================modal=======================
@@ -134,3 +166,18 @@ filterButton.onclick = function () {
   sectionFilter.style.display == 'none' ? sectionFilter.style.display = 'block' : sectionFilter.style.display = 'none';
 
 }
+
+
+$( function() {
+  $( "#slider-range" ).slider({
+    range: true,
+    min: 0,
+    max: 500,
+    values: [ 75, 300 ],
+    slide: function( event, ui ) {
+      $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+    }
+  });
+  $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+    " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+} );

@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <title>MacOutlet</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -58,15 +58,12 @@
                         <div class="accWrapper">
                             <button class="accordion acc1">Price</button>
                             <div class="panel panel-price">
-                                <div class="fromInput">
-                                    <span class="lineFromText">From</span>
-                                    <input type="number" class="priceFromInput">
-                                </div>
-    
-                                <div class="toInput">
-                                    <span class="lineToText">To</span>
-                                    <input type="number" class="priceToInput">
-                                </div>
+                                <p>
+                                    <label for="amount">Price range:</label>
+                                    <input type="text" id="amount">
+                                  </p>
+                                   
+                                  <div id="slider-range"></div>
     
                             </div>
                         </div>
@@ -74,66 +71,49 @@
                         <div class="accWrapper">
                             <button class="accordion acc1">Color</button>
                             <div class="panel panel-color">
-                                <div class="panel-color__inner">
+                                <div class="panel__inner panel-color__inner"></div>                        
+                            </div>
+                        </div>
+    
+                        <div class="accWrapper">
+                            <button class="accordion acc2">Memory</button>
+                            <div class="panel panel-memory">
+                                <div class="panel__inner panel-memory__inner">
                                    
                                 </div> 
                                
                             </div>
                         </div>
-    
+
                         <div class="accWrapper">
-                            <button class="accordion acc1">Price</button>
-                            <div class="panel panel-acc1">
-                                <div class="fromInput">
-                                    <span class="lineFromText">From</span>
-                                    <input type="number" class="priceFromInput">
-                                </div>
-    
-                                <div class="toInput">
-                                    <span class="lineToText">To</span>
-                                    <input type="number" class="priceToInput">
-                                </div>
-    
+                            <button class="accordion acc3">OS</button>
+                            <div class="panel panel-os">
+                                <div class="panel__inner panel-os__inner">
+                                   
+                                </div> 
+                               
                             </div>
                         </div>
-    
+
                         <div class="accWrapper">
-                            <button class="accordion acc1">Price</button>
-                            <div class="panel panel-acc1">
-                                <div class="fromInput">
-                                    <span class="lineFromText">From</span>
-                                    <input type="number" class="priceFromInput">
-                                </div>
-    
-                                <div class="toInput">
-                                    <span class="lineToText">To</span>
-                                    <input type="number" class="priceToInput">
-                                </div>
-    
+                            <button class="accordion acc4">Display</button>
+                            <div class="panel panel-display">
+                                <div class="panel__inner panel-display__inner">
+                                   
+                                </div> 
+                               
                             </div>
                         </div>
-    
-                        <div class="accWrapper">
-                            <button class="accordion acc1">Price</button>
-                            <div class="panel panel-acc1">
-                                <div class="fromInput">
-                                    <span class="lineFromText">From</span>
-                                    <input type="number" class="priceFromInput">
-                                </div>
-    
-                                <div class="toInput">
-                                    <span class="lineToText">To</span>
-                                    <input type="number" class="priceToInput">
-                                </div>
-    
-                            </div>
-                        </div>
+
+                                      
                     </div>
                 </div>
                 <div class="prod__cards"></div>
             </div>
         </div>
-
+        
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="js/items.js"></script>
         <script src="js/script.js"></script>
 </body>

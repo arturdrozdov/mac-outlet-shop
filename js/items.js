@@ -1193,7 +1193,7 @@ const items = [
             depth: '0.2', // cm
             weight: '0.04', // Кг
         },
-        os: null,
+        os: 'Watch Os',
         InTheBox: ['AirPods', 'Wireless Charging Case', 'Lightning to USB-A Cable', 'Documentation'],
         orderInfo: {
         	inStock: 23, // кол-во едениц товара в наличии
@@ -1228,7 +1228,7 @@ const items = [
             depth: '0.21', // cm
             weight: '0.04', // Кг
         },
-        os: null,
+        os: 'Watch Os',
         InTheBox: ['AirPods Pro', 'Wireless Charging Case', 'Lightning to USB-C Cable', 'Documentation', 'Silicone ear tips (three sizes)'],
         orderInfo: {
         	inStock: 29, // кол-во едениц товара в наличии
@@ -1263,7 +1263,7 @@ const items = [
             depth: '8.3', // cm
             weight: '0.38', // Кг
         },
-        os: null,
+        os: 'Watch Os',
         InTheBox: ['AirPods MAx', 'Smart Case', 'Lightning to USB-C Cable', 'Documentation'],
         orderInfo: {
         	inStock: 0, // кол-во едениц товара в наличии
