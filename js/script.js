@@ -1,27 +1,25 @@
 
 
-items.forEach(element => {
-
-  
+const renderCard = function(item){
 
   const itemCard = document.createElement('div');
 
   itemCard.className = `card`;
 
-  itemCard.id = `card-${element.id}`;
+  itemCard.id = `card-${item.id}`;
 
   itemCard.innerHTML = `
     <div class='topCard__inner'>
         <button type='submit' class='heard-button'><img src='img/icons/like_empty.svg' class='icon-heart' alt=''></button>
-        <div class='topCard-image'><img class='item-image' src='img/${element.imgUrl}' alt=''></div>
-        <h1 class='product-name'>${element.name}</h1>
-        <div class='quantity'><b>${element.orderInfo.inStock}</b> left in stock </div>
-        <div class='price'>Price: <b>${element.price}</b> $</div>
+        <div class='topCard-image'><img class='item-image' src='img/${item.imgUrl}' alt=''></div>
+        <h1 class='product-name'>${item.name}</h1>
+        <div class='quantity'><b>${item.orderInfo.inStock}</b> left in stock </div>
+        <div class='price'>Price: <b>${item.price}</b> $</div>
         <button class='addButton'>Add to cart</button>
     </div>
     <div class='botCard__inner'>
         <div class='botCard__inner-left'>
-            <span>${element.orderInfo.reviews}% Positive reviews</span>
+            <span>${item.orderInfo.reviews}% Positive reviews</span>
             <span>Above avarage</span>
         </div>
         <div class='botCard__inner-right'>
@@ -30,14 +28,78 @@ items.forEach(element => {
         </div>
     </div>`;
 
-  document.querySelector('.prod__cards').appendChild(itemCard);
+    
+      itemCard.onclick = function (e) {
+        showModal(item);
+        console.log(item);
+      }
 
-  itemCard.onclick = function () {
-    showModal(element);
-  }
+    return itemCard;
 
 
-});
+}
+
+const renderCards = function(arrItems){
+
+  arrItems.forEach(item => {
+
+    document.querySelector('.prod__cards').appendChild(renderCard(item));
+   })
+};
+renderCards(items);
+
+
+// let itemsInDom=document.('.card');
+
+// console.log(itemsInDom);
+
+// itemsInDom.forEach(item=>{
+//   item.onclick = function () {
+//     showModal(this);
+//     console.log(this)
+    
+//   }
+// })
+
+
+// items.forEach(element => {
+
+  
+
+//   const itemCard = document.createElement('div');
+
+//   itemCard.className = `card`;
+
+//   itemCard.id = `card-${element.id}`;
+
+//   itemCard.innerHTML = `
+//     <div class='topCard__inner'>
+//         <button type='submit' class='heard-button'><img src='img/icons/like_empty.svg' class='icon-heart' alt=''></button>
+//         <div class='topCard-image'><img class='item-image' src='img/${element.imgUrl}' alt=''></div>
+//         <h1 class='product-name'>${element.name}</h1>
+//         <div class='quantity'><b>${element.orderInfo.inStock}</b> left in stock </div>
+//         <div class='price'>Price: <b>${element.price}</b> $</div>
+//         <button class='addButton'>Add to cart</button>
+//     </div>
+//     <div class='botCard__inner'>
+//         <div class='botCard__inner-left'>
+//             <span>${element.orderInfo.reviews}% Positive reviews</span>
+//             <span>Above avarage</span>
+//         </div>
+//         <div class='botCard__inner-right'>
+//             <span>1234</span>
+//             <span>Orders</span>
+//         </div>
+//     </div>`;
+
+//   document.querySelector('.prod__cards').appendChild(itemCard);
+
+//   itemCard.onclick = function () {
+//     showModal(element);
+//   }
+
+
+// });
 
 
 

@@ -22,6 +22,16 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+}
+.basket{
+    padding: 2px;
+    
+   
+}
+
 .slider__inner {
     position: relative;
     max-width: 100%;
