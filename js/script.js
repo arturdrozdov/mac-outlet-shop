@@ -49,6 +49,7 @@ const renderCards = function(arrItems){
 renderCards(items);
 
 
+
 // let itemsInDom=document.('.card');
 
 // console.log(itemsInDom);
@@ -117,23 +118,43 @@ const arrOfMemory=items.map(element=>element.storage).filter((item, pos, arr) =>
 console.log(arrOfMemory);
 
 // const accordionColors = document.querySelector('.panel-color__inner');
+{/* <input type="checkbox" id="check2"><label for="check2">Ipsum</label> */}
 
+// function renderFilter(divClass, arrData){
+//   let accordionClass = document.querySelector(divClass);
+
+//   arrData.forEach(item =>{
+
+//     const label = document.createElement('label');
+//     label.innerText= item;
+
+//     const checkbox = document.createElement('input');
+//     checkbox.type = 'checkbox';
+//     label.appendChild(checkbox);
+//     accordionClass.appendChild(label);
+//   })
+
+// }
 
 function renderFilter(divClass, arrData){
-  let accordionClass = document.querySelector(divClass);
 
+  let accordionClass = document.querySelector(divClass);
   arrData.forEach(item =>{
 
-    const label = document.createElement('label');
-    label.innerText= item;
+    const innerDiv=document.createElement('div');
+    innerDiv.className=`panel__inner-div ${item}-div`;
 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
-    label.appendChild(checkbox);
-    accordionClass.appendChild(label);
+    checkbox.id=`checkbox${item}`;
+    const label = document.createElement('label');
+    label.innerText= item;
+    label.setAttribute('for',`checkbox${item}`);
+    innerDiv.append(checkbox,label);
+    accordionClass.append(innerDiv);
   })
-
 }
+
 
 renderFilter('.panel-color__inner', arrOfColors);
 renderFilter('.panel-memory__inner', arrOfMemory);
@@ -152,6 +173,37 @@ renderFilter('.panel-display__inner', arrOfDisplays);
 
 
 // })
+// let accordionMenuCheckboxes=document.querySelectorAll('.panel-color__inner label');
+// accordionMenuCheckboxes.forEach(box=>{
+//   box.onclick=e=>{
+//   console.log(e.currentTarget)
+//   e.stopPropagation();
+// };
+
+// })
+
+let accordionMenuLabels=document.querySelectorAll('.panel-color__inner label');
+let accordionMenuCheckboxes=document.querySelectorAll('.panel-color__inner input');
+
+accordionMenuLabels.forEach(box=>{
+  box.addEventListener('click',foo);
+  
+  function foo(e){
+  console.dir(e.currentTarget)
+  e.stopPropagation();
+};
+});
+accordionMenuCheckboxes.forEach(box=>{
+  box.addEventListener('click',foo);
+  box.addEventListener('click',foo);
+  
+  function foo(e){
+  console.dir(e.currentTarget)
+  e.stopPropagation();
+};
+
+});
+
 
 
 //=================================================================modal=======================

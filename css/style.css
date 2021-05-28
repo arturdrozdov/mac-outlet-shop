@@ -153,19 +153,18 @@ body {
 
   .panel__inner{
       line-height: 25px;
+      display: flex;
+      flex-wrap: wrap;
 
   }
-  .panel__inner label{
-      margin: 0 5px 5px;
-      display: inline-block;
-      text-align: center;
-  }
-  .panel__inner label input{
 
+  .panel__inner-div{
+margin-right: 10px;
+
+  }
+  .panel__inner-div label{
     margin-left: 2px;
-
   }
-  
   .active,
   .accordion:hover {
     background-color: rgb(247, 247, 247);
@@ -180,9 +179,7 @@ body {
     border-bottom: 1px solid rgb(212, 212, 212);
   }
   
-  .panel div+div {
-    margin-top: 10px;
-  }
+  
   
   .lineFromText {
     margin-right: 25px;
