@@ -50,19 +50,6 @@ renderCards(items);
 
 
 
-// let itemsInDom=document.('.card');
-
-// console.log(itemsInDom);
-
-// itemsInDom.forEach(item=>{
-//   item.onclick = function () {
-//     showModal(this);
-//     console.log(this)
-    
-//   }
-// })
-
-
 // items.forEach(element => {
 
   
