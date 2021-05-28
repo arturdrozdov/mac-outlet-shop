@@ -48,8 +48,6 @@ const renderCards = function(arrItems){
 };
 renderCards(items);
 
-
-
 // items.forEach(element => {
 
   
