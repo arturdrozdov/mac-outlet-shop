@@ -28,10 +28,24 @@ body {
 }
 .basket{
     padding: 2px;
-    
-   
+    position: relative;
+   /* display:none; */
 }
 
+
+.cart{
+    top: 50px;
+    right: 0;
+    position: absolute;
+    border: 1px solid grey;
+    z-index: 2;
+    background-color: grey;
+    display: none;
+}
+.cart__toggle{
+display:block;
+
+}
 .slider__inner {
     position: relative;
     max-width: 100%;
