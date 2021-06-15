@@ -193,6 +193,7 @@ const showModal = (elemData) => {
     }
   }
 
+  
   modal.innerHTML = `
   <div class="modal__inner">
   <div class='topCard-image'><img class='item-image' src='img/${elemData.imgUrl}' alt=''></div>
