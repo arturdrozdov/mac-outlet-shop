@@ -4,11 +4,11 @@
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-input{
+input {
     outline: none;
 }
 
@@ -22,18 +22,20 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.header__inner{
+.header__inner {
     display: flex;
     justify-content: space-between;
 }
-.basket{
+
+.basket {
     padding: 2px;
     position: relative;
-   /* display:none; */
+    /* display:none; */
 }
 
 
-.cart{
+.cart {
+    /* width: 250px; */
     top: 50px;
     right: 0;
     position: absolute;
@@ -42,10 +44,16 @@ body {
     background-color: grey;
     display: none;
 }
-.cart__toggle{
-display:block;
+
+.cart__toggle {
+    display: block;
+}
+
+.cart img {
+    max-width: 250px;
 
 }
+
 .slider__inner {
     position: relative;
     max-width: 100%;
@@ -130,15 +138,16 @@ display:block;
 
 }
 
-.main__section-inner{
+.main__section-inner {
     display: flex;
     justify-content: space-between;
 }
 
-.main__section-filter{
+.main__section-filter {
     width: calc(30% - 15px);
     display: block;
 }
+
 .accordionMenu {
     position: sticky;
     top: 10px;
@@ -149,10 +158,10 @@ display:block;
     overflow: hidden;
     box-shadow: 0 0 10px rgb(163 163 163 / 50%);
     border: 1px solid rgb(223, 223, 223);
-  }
-  
-  
-  .accordion {
+}
+
+
+.accordion {
     width: 100%;
     background-color: #EDF3FF;
     color: rgb(100, 100, 100);
@@ -163,45 +172,47 @@ display:block;
     border-bottom: 1px solid rgb(212, 212, 212);
     outline: none;
     transition: 0.3s;
-  }
+}
 
-  .panel__inner{
-      line-height: 25px;
-      display: flex;
-      flex-wrap: wrap;
+.panel__inner {
+    line-height: 25px;
+    display: flex;
+    flex-wrap: wrap;
 
-  }
+}
 
-  .panel__inner-div{
-margin-right: 10px;
+.panel__inner-div {
+    margin-right: 10px;
 
-  }
-  .panel__inner-div label{
+}
+
+.panel__inner-div label {
     margin-left: 2px;
-  }
-  .active,
-  .accordion:hover {
+}
+
+.active,
+.accordion:hover {
     background-color: rgb(247, 247, 247);
-  }
-  
-  .panel {
+}
+
+.panel {
     color: rgb(100, 100, 100);
     padding: 18px;
     display: none;
     overflow: hidden;
     flex-direction: column;
     border-bottom: 1px solid rgb(212, 212, 212);
-  }
-  
-  
-  
-  .lineFromText {
+}
+
+
+
+.lineFromText {
     margin-right: 25px;
-  }
-  
-  .lineToText {
+}
+
+.lineToText {
     margin-right: 43px;
-  }
+}
 
 .prod__cards {
 
@@ -211,7 +222,7 @@ margin-right: 10px;
     width: calc(70% - 15px);
 }
 
-.prod__cards-toogle{
+.prod__cards-toogle {
     width: auto;
 }
 
@@ -227,9 +238,9 @@ margin-right: 10px;
 }
 
 .topCard__inner {
-    
-     max-width: 100%;
-    
+
+    max-width: 100%;
+
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -313,26 +324,25 @@ margin-right: 10px;
     width: 22px;
 }
 
-.modal{
+.modal {
     display: none;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     position: fixed;
     width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.5)
-    
 }
 
-.modal__active{
+.modal__active {
     display: flex;
 }
 
-.modal__inner{
-    
-    border:1px solid rgb(179, 179, 179);
+.modal__inner {
+
+    border: 1px solid rgb(179, 179, 179);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -342,42 +352,42 @@ margin-right: 10px;
 }
 
 
-.item__info{
+.item__info {
     padding: 15px;
     display: flex;
-    
+
     flex-direction: column;
     border-left: 1px solid rgb(179, 179, 179);
     border-right: 1px solid rgb(179, 179, 179);
 }
 
-.item__info-mainInfo{
-   
+.item__info-mainInfo {
+
     display: flex;
     flex-direction: column;
 }
 
-.item__info-mainInfo span + span{
+.item__info-mainInfo span+span {
     margin-top: 10px;
 }
 
-.item__price{
+.item__price {
     text-align: center;
     padding: 15px;
 }
 
-.item__price-price{
+.item__price-price {
     font-weight: 700;
     font-size: 25px;
 }
 
 
 @media (max-width: 850px) {
-    .card{
+    .card {
         max-width: 100%;
     }
 
-    .main__section-filter{
+    .main__section-filter {
         width: 55%;
     }
 
@@ -387,8 +397,8 @@ margin-right: 10px;
 }
 
 
-input{
-    border:0;
-    color:rgb(67, 67, 255);
-    font-weight:bold;
+input {
+    border: 0;
+    color: rgb(67, 67, 255);
+    font-weight: bold;
 }

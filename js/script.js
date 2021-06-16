@@ -193,7 +193,7 @@ const showModal = (elemData) => {
     }
   }
 
-  
+
   modal.innerHTML = `
   <div class="modal__inner">
   <div class='topCard-image'><img class='item-image' src='img/${elemData.imgUrl}' alt=''></div>
@@ -301,6 +301,8 @@ function renderCart() {
     cartInner.innerHTML += `
     <img src='img/${item.data.imgUrl}'>
     <span>${item.data.name}</span>
+    <span>Items:${cart.totalItems}</span>
+    <span>TotalPrice:${cart.totalPrice}</span>
     `
 
   })
